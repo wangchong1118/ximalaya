@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b35befd (react navigation done)
+=======
+>>>>>>> acd909b03bf9c33f4baa4d4ac40b7b8e84ecbdc3
 # Logs
 logs
 *.log
@@ -107,6 +110,7 @@ dist
 # TernJS port file
 .tern-port
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 # OSX
@@ -174,3 +178,5 @@ buck-out/
 /ios/Pods/
 >>>>>>> a5fc1f4 (react navigion done)
 >>>>>>> b35befd (react navigation done)
+=======
+>>>>>>> acd909b03bf9c33f4baa4d4ac40b7b8e84ecbdc3
