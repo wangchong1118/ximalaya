@@ -7,6 +7,7 @@ import Account from '@/pages/Account';
 import { RootStackNavigation } from './index';
 import { RouteProp, TabNavigationState } from '@react-navigation/native';
 import { RootStackParamList } from '@/navigator/index';
+import IconFont from '../assets/iconfont/index';
 
 export type BottomTabParamList = {
     Home: undefined;
@@ -30,7 +31,7 @@ function getHeaderTitle(route: Route){
             : route.params?.screen || 'Home';
     switch(routeName){
         case 'Home':
-            return '首页';
+            return '喜马拉雅';
         case 'Listen':
             return '我听';
         case 'Found':
@@ -38,7 +39,7 @@ function getHeaderTitle(route: Route){
         case 'Account':
             return '我的';
         default:
-            return '首页';
+            return '喜马拉雅';
     }
 }
 
@@ -53,10 +54,10 @@ class BottomTabs extends React.Component<IProps> {
     render(){
         return (
             <Tab.Navigator tabBarOptions={{activeTintColor: '#f86442'}}>
-                <Tab.Screen name='Home' component={Home} options={{tabBarLabel: '首页'}} />
-                <Tab.Screen name='Listen' component={Listen}  options={{tabBarLabel: '我听'}} />
-                <Tab.Screen name='Found' component={Found}  options={{tabBarLabel: '发现'}} />
-                <Tab.Screen name='Account' component={Account}  options={{tabBarLabel: '我的'}} />
+                <Tab.Screen name='Home' component={Home} options={{tabBarLabel: '首页', tabBarIcon: ({color, size}) => <IconFont name="gouwo" color={color} size={size} />}} />
+                <Tab.Screen name='Listen' component={Listen}  options={{tabBarLabel: '我听', tabBarIcon: ({color, size}) => <IconFont name="erji-toudaishierji-shengyin-yinle" color={color} size={size} />}} />
+                <Tab.Screen name='Found' component={Found}  options={{tabBarLabel: '发现', tabBarIcon: ({color, size}) => <IconFont name="faxian" color={color} size={size} />}} />
+                <Tab.Screen name='Account' component={Account}  options={{tabBarLabel: '我的', tabBarIcon: ({color, size}) => <IconFont name="wode" color={color} size={size} />}} />
             </Tab.Navigator>
         )
     }

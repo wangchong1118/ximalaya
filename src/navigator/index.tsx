@@ -22,23 +22,23 @@ class Navigator extends Component {
         return (
             <NavigationContainer>
                 <Stack.Navigator
-                    headerMode='float'
-                    screenOptions={{
-                        headerTitleAlign: 'center',
-                        headerStyleInterpolator: HeaderStyleInterpolators.forUIKit,
-                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-                        gestureEnabled: true,
-                        gestureDirection: 'horizontal',
-                        headerStyle: {
-                            ...Platform.select({
-                                android: {
-                                    elevation: 0,
-                                    borderBottomWidth: StyleSheet.hairlineWidth
-                                }
-                            })
-                        }
-                    }}>
-                    <Stack.Screen name='BottomTabs' component={BottomTabs} />
+                headerMode='float'
+                screenOptions={{
+                    headerTitleAlign: 'center',
+                    headerStyleInterpolator: HeaderStyleInterpolators.forUIKit,
+                    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+                    gestureEnabled: true,
+                    gestureDirection: 'horizontal',
+                    headerStyle: {
+                        ...Platform.select({
+                            android: {
+                                elevation: 0,
+                                borderBottomWidth: StyleSheet.hairlineWidth
+                            }
+                        })
+                    }
+                }}>
+                    <Stack.Screen options={{headerTitle: '喜马拉雅'}} name='BottomTabs' component={BottomTabs} />
                     <Stack.Screen options={{headerTitle: '详情页'}} name='Detail' component={Detail} />
                 </Stack.Navigator>
             </NavigationContainer>
