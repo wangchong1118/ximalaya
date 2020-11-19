@@ -4,6 +4,7 @@ import { CardStyleInterpolators, createStackNavigator, HeaderStyleInterpolators,
 import BottomTabs from './BottomTabs';
 import Detail from '@/pages/Detail';
 import { Platform, StyleSheet } from 'react-native';
+import { StatusBar } from 'react-native';
 
 export type RootStackNavigation = StackNavigationProp<RootStackParamList>;
 export type RootStackParamList = {
@@ -29,6 +30,7 @@ class Navigator extends Component {
                     cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
                     gestureEnabled: true,
                     gestureDirection: 'horizontal',
+                    headerStatusBarHeight: StatusBar.currentHeight,
                     headerStyle: {
                         ...Platform.select({
                             android: {
